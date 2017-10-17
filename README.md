@@ -40,8 +40,8 @@ optional arguments:
                         Minimum number of reads in a RAD locus, default=6
   -s MINSAMPLE, --min-samples MINSAMPLE
                         Minimum number of samples in a locus, default=4
-  -l MAXLOCUSLEN, --mean-locus-length MAXLOCUSLEN
-                        Maximum RAD locus length in basepairs, default=270
+  -l MEANLOCUSLEN, --mean-locus-length MEANLOCUSLEN
+                        Mean RAD locus length in basepairs, default=270
 ```
 
 ## _Examples_
