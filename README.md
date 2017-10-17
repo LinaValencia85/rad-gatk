@@ -55,4 +55,6 @@ If you want statistics per RAD locus across samples, for loci represented by at 
 python gatk-rad-loci-stats-s7.py -i across_samples.vcf.table -s 30 -l 250
 ```
 
-If you have any questions, please just send us an email.
+## _Credits_
+- Code: [Edgardo M. Ortiz](mailto:e.ortiz.v@gmail.com)
+- Data and testing: [Lina M. Valencia](mailto:linavalencia85@gmail.com)
