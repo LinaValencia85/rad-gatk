@@ -2,7 +2,7 @@
 Tools to obtain locus-based statistics from RADseq data analyzed with GATK
 
 ## _Brief description_
-GATK was designed to map whole genome shotgun reads (randomly fragmented DNA) to a reference genome in order to discover an call variants. However reads from a RAD experiment can also be used with some modifications in the GATK preliminary steps, most notably, we must skip the "Eliminate duplicates" step since we would loose most of the coverage per locus.
+GATK was designed to map whole genome shotgun reads (randomly fragmented DNA) to a reference genome in order to discover and call variants. However, reads from a RAD experiment can also be used with some modifications in the GATK preliminary steps, most notably, we must skip the "Eliminate duplicates" step since we would loose most of the coverage per locus.
 
 GATK outputs VCF files were only data abut the SNPs are reported without reference to each specific RAD locus, these scripts attempt to recover information based on each particular RAD locus based on the genomic coordinates of the SNPs determining if adjacent SNPs belong to a single RAD locus or not.
 
