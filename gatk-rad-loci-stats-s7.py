@@ -117,7 +117,7 @@ def main():
 
 
     # Prepare and write samples per locus output 
-    outfile = open(filename.split('.')[0]+"_gatkS7_samples_snps_per_locus.txt", "w")
+    outfile = open(filename.split('.')[0]+"_gatkS7_samples_snps_per_locus.csv", "w")
     outfile.write("\n".join(loci)+"\nTotal SNPs:"+str(numsnps_total)+"\n")
     outfile.close()
 
@@ -126,7 +126,7 @@ def main():
         locipersampleout.append(locipersample[i][0]+"\t"+str(locipersample[i][1]))
 
     # Prepare and write loci per sample output 
-    outfile = open(filename.split('.')[0]+"_gatkS7_loci_per_sample.txt", "w")
+    outfile = open(filename.split('.')[0]+"_gatkS7_loci_per_sample.csv", "w")
     outfile.write("\n".join(locipersampleout)+"\n")
     outfile.close()
 
