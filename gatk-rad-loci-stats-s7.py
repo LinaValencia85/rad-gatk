@@ -45,7 +45,7 @@ def main():
         help="Minimum number of reads in a RAD locus, default=6")
     parser.add_argument("-s", "--min-samples", action="store", dest="minsample", type=int, default=4,
         help="Minimum number of samples in a locus, default=4")
-    parser.add_argument("-l", "--mean-locus-length", action="store", dest="maxlocuslen", type=int, default=270,
+    parser.add_argument("-l", "--mean-locus-length", action="store", dest="meanlocuslen", type=int, default=270,
         help="Maximum RAD locus length in basepairs, default=270")
     args = parser.parse_args()
 
