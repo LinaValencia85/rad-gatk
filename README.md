@@ -39,7 +39,7 @@ optional arguments:
   -d MINDEPTH, --min-locus-depth MINDEPTH
                         Minimum number of reads in a RAD locus, default=6
   -s MINSAMPLE, --min-samples MINSAMPLE
-                        Minimum number of sample in a locus, default=4
+                        Minimum number of samples in a locus, default=4
   -l MAXLOCUSLEN, --mean-locus-length MAXLOCUSLEN
                         Maximum RAD locus length in basepairs, default=270
 ```
