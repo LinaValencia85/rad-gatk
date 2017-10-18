@@ -46,11 +46,11 @@ optional arguments:
 
 ## _Examples_
 
-If you want to obtain RAD locus information for `sample_1` for loci covered at least 10x and assuming a mean locus length of 300bp:
+_Example 1:_ If you want to obtain RAD locus information from `sample_1` for loci covered at least 10x and assuming a mean locus length of 300bp:
 ```bash
 python gatk-rad-loci-stats-s3.py -i sample_1.vcf.table -d 10 -l 300
 ```
-If you want statistics per RAD locus across samples, for loci represented by at least 30 samples, and assuming a mean locus length of 250bp:
+_Example 2:_ If you want statistics per RAD locus across samples, for loci represented by at least 30 samples, and assuming a mean locus length of 250bp:
 ```bash
 python gatk-rad-loci-stats-s7.py -i across_samples.vcf.table -s 30 -l 250
 ```
