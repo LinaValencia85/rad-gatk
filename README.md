@@ -27,7 +27,7 @@ optional arguments:
 or `python gatk-rad-loci-stats-s7.py -h`:
 ```
 usage: gatk-rad-loci-stats-s7.py [-h] -i FILENAME [-d MINDEPTH] [-s MINSAMPLE]
-                          [-l MAXLOCUSLEN]
+                          [-l MEANLOCUSLEN]
 
 Get loci statistics from GATK (across samples = (i)pyrad's step 7)
 
