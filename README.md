@@ -22,6 +22,7 @@ java -jar GenomeAnalysisTK.jar \
 ```
 The VCF input file to use in `python gatk-rad-loci-stats-s3.py` should look like this:
 
+```
 CHROM	POS	QUAL	./samplename.DP
 1	1	-10.0	0
 1	46742	-10.0	22
@@ -31,9 +32,10 @@ CHROM	POS	QUAL	./samplename.DP
 1	46747	-10.0	22
 1	46761	-10.0	22
 1	46762	-10.0	23
-
+```
 While the one for `python gatk-rad-loci-stats-s7.py` like this:
 
+```
 CHROM	POS	ALT	QUAL	./ALOE2_sub8_merged.GT	./ALOE2_sub8_merged.DP	./ALOSM_ref_merged.GT	
 1	11163	C	67.76	./.	0	./.	0	./.	0	./.	1	./.	0	./.	0	./.	0	./.	0	./.	0	
 1	11192	A	67.76	./.	0	./.	0	./.	0	./.	1	./.	0	./.	0	./.	0	./.	0	./.	0	
@@ -43,7 +45,7 @@ CHROM	POS	ALT	QUAL	./ALOE2_sub8_merged.GT	./ALOE2_sub8_merged.DP	./ALOSM_ref_mer
 1	11222	C	64.75	./.	0	./.	0	./.	0	T/T	1	./.	0	./.	0	./.	0	./.	0	./.	0	
 1	11223	A	64.75	./.	0	./.	0	./.	0	G/G	1	./.	0	./.	0	./.	0	./.	0	./.	0	
 1	11232	G	67.76	./.	0	./.	0	./.	0	./.	1	./.	0	./.	0	./.	0	./.	0	./.	0	
-
+```
 
 To access help on each parameter just type `python gatk-rad-loci-stats-s3.py -h` :
 
