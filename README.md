@@ -7,9 +7,7 @@ Tools to obtain locus-based statistics from RADseq data analyzed with GATK
 GATK outputs VCF files where only data about individual SNPs are reported without reference to each specific RAD locus. The following  scripts attempt to recover information about each particular RAD locus based on the genomic coordinates of the SNPs, by determining if adjacent SNPs belong to a single RAD locus or not.
 
 ## _Usage_
-Each script has few options, for example the minimum read depth to consider a locus as valid, or the mean locus length of your RAD loci (e.g. if you sequenced PE 2x150 you should probably have a mean locus length of ~300bp.
-
-In order to use the scripts be sure that in GATK you run the VariantstoTable command following command specifying in the optional parameter "fields" (-F) the variables CHROM, POS, QUAL to be captured in the output table.
+In order to use the scripts be sure that in GATK you run the VariantstoTable command specifying in the optional parameter "fields" (-F) the variables CHROM, POS, QUAL. This command will output in the input VCF file for the scripts.
 
 ```
 java -jar GenomeAnalysisTK.jar \
@@ -33,7 +31,7 @@ CHROM	POS	QUAL	./samplename.DP
 1	46761	-10.0	22
 1	46762	-10.0	23
 ```
-While the one for `python gatk-rad-loci-stats-s7.py` like this:
+While the one for `python gatk-rad-loci-stats-s7.py` should look like this:
 
 ```
 CHROM	POS	ALT	QUAL	./ALOE2_sub8_merged.GT	./ALOE2_sub8_merged.DP	./ALOSM_ref_merged.GT	
@@ -46,6 +44,8 @@ CHROM	POS	ALT	QUAL	./ALOE2_sub8_merged.GT	./ALOE2_sub8_merged.DP	./ALOSM_ref_mer
 1	11223	A	64.75	./.	0	./.	0	./.	0	G/G	1	./.	0	./.	0	./.	0	./.	0	./.	0	
 1	11232	G	67.76	./.	0	./.	0	./.	0	./.	1	./.	0	./.	0	./.	0	./.	0	./.	0	
 ```
+
+Each script has few options, for example the minimum read depth to consider a locus as valid, or the mean locus length of your RAD loci (e.g. if you sequenced PE 2x150 you should probably have a mean locus length of ~300bp.
 
 To access help on each parameter just type `python gatk-rad-loci-stats-s3.py -h` :
 
