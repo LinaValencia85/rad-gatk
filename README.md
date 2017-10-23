@@ -9,7 +9,42 @@ GATK outputs VCF files where only data about individual SNPs are reported withou
 ## _Usage_
 Each script has few options, for example the minimum read depth to consider a locus as valid, or the mean locus length of your RAD loci (e.g. if you sequenced PE 2x150 you should probably have a mean locus length of ~300bp.
 
-In order to use the scripts be sure that in GATK you run the following command specifying t
+In order to use the scripts be sure that in GATK you run the VariantstoTable command following command specifying in the optional parameter "fields" (-F) the variables CHROM, POS, QUAL to be captured in the output table.
+
+```
+java -jar GenomeAnalysisTK.jar \
+-R reference.fasta
+-T VariantsToTable \
+-V file.vcf \
+-F CHROM -F POS -F ID -F QUAL -F AC \
+-o results.table
+
+```
+The VCF input file to use in `python gatk-rad-loci-stats-s3.py` should look like this:
+
+CHROM	POS	QUAL	./samplename.DP
+1	1	-10.0	0
+1	46742	-10.0	22
+1	46743	-10.0	22
+1	46744	-10.0	22
+1	46746	-10.0	22
+1	46747	-10.0	22
+1	46761	-10.0	22
+1	46762	-10.0	23
+
+While the one for `python gatk-rad-loci-stats-s7.py` like this:
+
+CHROM	POS	ALT	QUAL	./ALOE2_sub8_merged.GT	./ALOE2_sub8_merged.DP	./ALOSM_ref_merged.GT	
+1	11163	C	67.76	./.	0	./.	0	./.	0	./.	1	./.	0	./.	0	./.	0	./.	0	./.	0	
+1	11192	A	67.76	./.	0	./.	0	./.	0	./.	1	./.	0	./.	0	./.	0	./.	0	./.	0	
+1	11193	TA	58.71000000000001	./.	0	./.	0	./.	0	./.	1	./.	0	./.	0	./.	0	./.
+1	11196	C	61.86	./.	0	./.	0	./.	0	T/T	1	./.	0	./.	0	./.	0	./.	0	./.	0	
+1	11209	G	64.75	./.	0	./.	0	./.	0	A/A	1	./.	0	./.	0	./.	0	./.	0	./.	0	
+1	11222	C	64.75	./.	0	./.	0	./.	0	T/T	1	./.	0	./.	0	./.	0	./.	0	./.	0	
+1	11223	A	64.75	./.	0	./.	0	./.	0	G/G	1	./.	0	./.	0	./.	0	./.	0	./.	0	
+1	11232	G	67.76	./.	0	./.	0	./.	0	./.	1	./.	0	./.	0	./.	0	./.	0	./.	0	
+
+
 To access help on each parameter just type `python gatk-rad-loci-stats-s3.py -h` :
 
 ```
