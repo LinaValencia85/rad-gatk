@@ -2,9 +2,9 @@
 Tools to obtain locus-based statistics from RADseq data analyzed with GATK
 
 ## _Brief description_
-[GATK](https://software.broadinstitute.org/gatk/) was designed to map whole genome shotgun reads (randomly fragmented DNA) to a reference genome in order to discover and call variants. However, reads from a RAD experiment can also be used with some modifications in the GATK preliminary steps. Most notably, we must skip the "Eliminate duplicates" step since we would loose most of the coverage per locus.
+[GATK](https://software.broadinstitute.org/gatk/) was designed to map whole genome shotgun reads (randomly fragmented DNA) to a reference genome in order to discover and call variants. However, reads from a RAD experiment can also be used in GATK with some modifications in the preliminary steps. Most notably, we must skip the "Eliminate duplicates" step since we would loose most of the coverage per locus.
 
-GATK outputs VCF files where only data about individual SNPs are reported without reference to each specific RAD locus, these scripts attempt to recover information based on each particular RAD locus based on the genomic coordinates of the SNPs determining if adjacent SNPs belong to a single RAD locus or not.
+GATK outputs VCF files where only data about individual SNPs are reported without reference to each specific RAD locus. The following  scripts attempt to recover information about each particular RAD locus based on the genomic coordinates of the SNPs, by determining if adjacent SNPs belong to a single RAD locus or not.
 
 ## _Usage_
 Each script has few options, for example the minimum read depth to consider a locus as valid, or the mean locus length of your RAD loci (e.g. if you sequenced PE 2x150 you should probably have a mean locus length of ~300bp), to access help on each parameter just type `python gatk-rad-loci-stats-s3.py -h` :
