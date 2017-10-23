@@ -7,7 +7,7 @@ Tools to obtain locus-based statistics from RADseq data analyzed with GATK
 GATK outputs VCF files where only data about individual SNPs are reported without reference to each specific RAD locus. The following  scripts attempt to recover information about each particular RAD locus based on the genomic coordinates of the SNPs, by determining if adjacent SNPs belong to a single RAD locus or not.
 
 ## _Usage_
-In order to use the scripts be sure that in GATK you run the VariantstoTable command specifying in the optional parameter "fields" (-F) the variables CHROM, POS, QUAL. This command will output in the input VCF file for the scripts.
+In order to use the scripts be sure that in GATK you run the VariantstoTable command specifying in the optional parameter "fields" (-F) the variables CHROM, POS, QUAL. This command will output the input VCF file needed to run the the scripts.
 
 ```
 java -jar GenomeAnalysisTK.jar \
